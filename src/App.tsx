@@ -1,9 +1,9 @@
-import * as React from "react";
-import { ChakraProvider, Box, Grid, theme, Button, VStack, Container } from "@chakra-ui/react";
-import { Timer } from "./components/Timer";
-import { Quote } from "./components/Quote";
-import { Navbar } from "./components/Navbar";
+import { Box, Button, ChakraProvider, Container, Grid, theme, VStack } from "@chakra-ui/react";
 import Axios from "axios";
+import * as React from "react";
+import { Navbar } from "./components/Navbar";
+import { Quote } from "./components/Quote";
+import { Timer } from "./components/Timer";
 
 export const App = () => {
     const [currentQuote, setCurrentQuote] = React.useState({ quote: "", author: "" });
@@ -22,9 +22,9 @@ export const App = () => {
             <Box textAlign="center" fontSize="xl">
                 <Navbar />
                 <Grid minH="90vh" p={3}>
-                    <Container maxW="2xl" mt="24">
+                    <Container maxW="container.sm" mt="24">
                         <VStack spacing="12" justifyContent="center">
-                            <Box px="16" py="8" borderWidth="3px" borderRadius="lg">
+                            <Box px="4" py="2" borderWidth="3px" borderRadius="lg">
                                 <Timer size="4xl" />
                             </Box>
                             <Box>

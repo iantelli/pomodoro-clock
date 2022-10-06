@@ -1,5 +1,5 @@
+import { Button, Flex, Heading, HeadingProps, Text } from "@chakra-ui/react";
 import * as React from "react";
-import { Heading, HeadingProps, Button, Flex, Text } from "@chakra-ui/react";
 
 export const Timer: React.FC<HeadingProps> = props => {
     const [seconds, setSeconds] = React.useState(25 * 60);
@@ -43,7 +43,7 @@ export const Timer: React.FC<HeadingProps> = props => {
             </Heading>
             <Text>{isBreak ? "Break Time 🥳" : "Focus ✍️"}</Text>
 
-            <Flex justifyContent="center" gap="6">
+            <Flex justifyContent="center" gap="4">
                 <Button size="lg" onClick={startTimer}>
                     ▶️
                 </Button>
