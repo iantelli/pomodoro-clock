@@ -1,3 +1,19 @@
+# Pomodoro Clock
+
+This project was inspired by my lack of motivation. I decided to create something that could improve my workflow. This is the first time trying Chakra UI and so far I'm impressed.
+
+[View the App]()
+
+## Todo
+
+1. User can see a timer for 25 minutes - the working session ✅
+2. After the working session is over, the User can see a timer for 5 minutes - the break session ✅
+3. User can start / pause, stop and reset the timers ✅
+4. User should hear a pleasant sound when the timer hits 00:00 ❌
+5. User should be able to customize the amount of time in both sessions (Focus/Break) ❌
+
+---
+
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
