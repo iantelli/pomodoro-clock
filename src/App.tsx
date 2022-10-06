@@ -1,4 +1,4 @@
-import { Box, Button, ChakraProvider, Container, Grid, theme, VStack } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, Container, Grid, Skeleton, theme, VStack } from "@chakra-ui/react";
 import Axios from "axios";
 import * as React from "react";
 import { Navbar } from "./components/Navbar";
@@ -7,10 +7,12 @@ import { Timer } from "./components/Timer";
 
 export const App = () => {
     const [currentQuote, setCurrentQuote] = React.useState({ quote: "", author: "" });
+    const [isLoading, setIsLoading] = React.useState(true);
 
     const apiCall = async () => {
         const response = await Axios.get("https://api.quotable.io/random");
         setCurrentQuote({ quote: response.data.content, author: response.data.author });
+        setIsLoading(false);
     };
 
     React.useEffect(() => {
@@ -28,7 +30,9 @@ export const App = () => {
                                 <Timer size="4xl" />
                             </Box>
                             <Box>
-                                <Quote quote={currentQuote.quote} author={currentQuote.author} />
+                                <Skeleton minW="lg"isLoaded={!isLoading}>
+                                    <Quote quote={currentQuote.quote} author={currentQuote.author} />
+                                </Skeleton>
                                 <Button onClick={apiCall}>New Quote</Button>
                             </Box>
                         </VStack>
