@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChakraProvider, Box, Grid, theme, Button, VStack } from "@chakra-ui/react";
+import { ChakraProvider, Box, Grid, theme, Button, VStack, Container } from "@chakra-ui/react";
 import { Timer } from "./components/Timer";
 import { Quote } from "./components/Quote";
 import { Navbar } from "./components/Navbar";
@@ -22,15 +22,17 @@ export const App = () => {
             <Box textAlign="center" fontSize="xl">
                 <Navbar />
                 <Grid minH="90vh" p={3}>
-                    <VStack spacing="24" justifyContent="center">
-                        <Box px="16" py="8" borderWidth="3px" borderRadius="lg">
-                            <Timer size="4xl" />
-                        </Box>
-                        <Box>
-                            <Quote quote={currentQuote.quote} author={currentQuote.author} />
-                            <Button onClick={apiCall}>New Quote</Button>
-                        </Box>
-                    </VStack>
+                    <Container maxW="2xl" mt="24">
+                        <VStack spacing="12" justifyContent="center">
+                            <Box px="16" py="8" borderWidth="3px" borderRadius="lg">
+                                <Timer size="4xl" />
+                            </Box>
+                            <Box>
+                                <Quote quote={currentQuote.quote} author={currentQuote.author} />
+                                <Button onClick={apiCall}>New Quote</Button>
+                            </Box>
+                        </VStack>
+                    </Container>
                 </Grid>
             </Box>
         </ChakraProvider>
