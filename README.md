@@ -2,7 +2,7 @@
 
 This project was inspired by my lack of motivation. I decided to create something that could improve my workflow. This is the first time trying Chakra UI and so far I'm impressed.
 
-[View the App]()
+[View the App](https://pomodoro-clock-plum.vercel.app)
 
 ## Todo
 
