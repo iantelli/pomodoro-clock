@@ -1,4 +1,13 @@
-import { Box, Button, ChakraProvider, Container, Grid, Skeleton, theme, VStack } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    ChakraProvider,
+    Container,
+    Grid,
+    Skeleton,
+    theme,
+    VStack,
+} from "@chakra-ui/react";
 import Axios from "axios";
 import * as React from "react";
 import { Navbar } from "./components/Navbar";
@@ -31,7 +40,10 @@ export const App = () => {
                             </Box>
                             <Box>
                                 <Skeleton minW="280px" isLoaded={!isLoading}>
-                                    <Quote quote={currentQuote.quote} author={currentQuote.author} />
+                                    <Quote
+                                        quote={currentQuote.quote}
+                                        author={currentQuote.author}
+                                    />
                                 </Skeleton>
                                 <Button onClick={apiCall}>New Quote</Button>
                             </Box>

@@ -1,6 +1,6 @@
-import { Heading, Flex, Spacer, Box, Icon, Link } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import { Box, Flex, Heading, Icon, Link, Spacer } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 export const Navbar = () => {
     return (
