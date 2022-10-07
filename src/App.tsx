@@ -30,7 +30,7 @@ export const App = () => {
                                 <Timer size="4xl" />
                             </Box>
                             <Box>
-                                <Skeleton minW="lg"isLoaded={!isLoading}>
+                                <Skeleton minW="280px" isLoaded={!isLoading}>
                                     <Quote quote={currentQuote.quote} author={currentQuote.author} />
                                 </Skeleton>
                                 <Button onClick={apiCall}>New Quote</Button>
