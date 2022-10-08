@@ -5,6 +5,7 @@ import {
     Container,
     Grid,
     Skeleton,
+    SkeletonText,
     theme,
     VStack,
 } from "@chakra-ui/react";
@@ -19,6 +20,7 @@ export const App = () => {
     const [isLoading, setIsLoading] = React.useState(true);
 
     const apiCall = async () => {
+        setIsLoading(true);
         const response = await Axios.get("https://api.quotable.io/random");
         setCurrentQuote({ quote: response.data.content, author: response.data.author });
         setIsLoading(false);
@@ -39,12 +41,17 @@ export const App = () => {
                                 <Timer size="4xl" />
                             </Box>
                             <Box>
-                                <Skeleton minW="280px" isLoaded={!isLoading}>
+                                <SkeletonText
+                                    minW="350px"
+                                    noOfLines={4}
+                                    spacing="2"
+                                    isLoaded={!isLoading}
+                                >
                                     <Quote
                                         quote={currentQuote.quote}
                                         author={currentQuote.author}
                                     />
-                                </Skeleton>
+                                </SkeletonText>
                                 <Button onClick={apiCall}>New Quote</Button>
                             </Box>
                         </VStack>

@@ -33,6 +33,7 @@ export const Timer: React.FC<HeadingProps> = props => {
         isBreak ? startRelaxTimer() : setSeconds(25 * 60);
     }
     function startRelaxTimer() {
+        setPaused(true);
         setSeconds(5 * 60);
     }
 
