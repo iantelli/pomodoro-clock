@@ -4,7 +4,6 @@ import {
     ChakraProvider,
     Container,
     Grid,
-    Skeleton,
     SkeletonText,
     theme,
     VStack,
@@ -37,7 +36,7 @@ export const App = () => {
                 <Grid minH="90vh" p={3}>
                     <Container maxW="container.sm" mt="24">
                         <VStack spacing="12" justifyContent="center">
-                            <Box px="4" py="2" borderWidth="3px" borderRadius="lg">
+                            <Box minW="300px" px="4" py="2" borderWidth="3px" borderRadius="lg">
                                 <Timer size="4xl" />
                             </Box>
                             <Box>
